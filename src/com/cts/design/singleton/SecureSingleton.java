@@ -3,6 +3,8 @@ package com.cts.design.singleton;
 /**
  * @author arindam
  *
+ *         There is serialization.
+ *
  */
 public class SecureSingleton {
 	private static SecureSingleton singleton;
