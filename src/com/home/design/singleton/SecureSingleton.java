@@ -1,4 +1,4 @@
-package com.cts.design.singleton;
+package com.home.design.singleton;
 
 import java.io.IOException;
 import java.io.ObjectInputStream;

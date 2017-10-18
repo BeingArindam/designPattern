@@ -1,8 +1,11 @@
-package com.cts.design.singleton;
+package com.home.design.singleton;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import junit.framework.Assert;
+import com.home.design.singleton.SecureSingleton;
 
 public class SecureSingletonTest {
 
@@ -11,14 +14,14 @@ public class SecureSingletonTest {
 		final SecureSingleton instance = SecureSingleton.getInstance();
 		final SecureSingleton instance2 = SecureSingleton.getInstance();
 
-		Assert.assertEquals(instance, instance2);
+		assertEquals(instance, instance2);
 
 		try {
-			final Object newInstance = Class.forName("com.cts.design.singleton.SecureSingleton").newInstance();
-			Assert.assertTrue(false);
+			Class.forName("com.cts.design.singleton.SecureSingleton").newInstance();
+			assertTrue(false);
 		} catch (InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 			e.printStackTrace();
-			Assert.assertTrue(true);
+			assertTrue(true);
 		}
 
 	}
